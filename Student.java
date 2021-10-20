@@ -17,21 +17,17 @@ public class Student {
     public void printFullName(){
         System.out.println(firstName + lastName);
     }
-    public void isApproved(){
-        if (grade >= 60) {
-            System.out.println("Registration number " + registration + " is approved");
-        } else {
-            System.out.println("Sorry, registration number " + registration + " is NOT approved");
-        }
+    public boolean isApproved(){
+        return grade >= 60;
     }
-    public int changeYearIfApproved() {
-        if (grade >= 60) {
-            year = year + 1;
+    public void changeYearIfApproved() {
+        if (this.isApproved()) {
+            year ++;
             System.out.println("Congratulations, you are promoted to year " + year);
         } else {
             System.out.println("Sorry you have been retained in year " + year);
         }
-        return 0;
+
     }
 }
 

@@ -13,13 +13,15 @@ public class Main {
     student3.changeYearIfApproved();
 
 
-    Courses course = new Courses("Biology", "Howard", 4);
+    Courses course = new Courses("Biology", "Howard", 4, new ArrayList<Student>());
     course.printCourse();
     course.enroll(student3);
     course.enroll(student1);
     course.unenroll(student3);
 
     course.countStudents();
+
+    System.out.println("Best grade: " + course.bestGrade());
     }
 
 }
